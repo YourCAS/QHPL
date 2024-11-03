@@ -1,0 +1,33 @@
+// CONCEPT CODE
+// This code is INDENTATION BASED. See later code for NON-INDENT-BASED CODE.
+
+// The following code...
+
+php:
+  echo {p: Hello, world!};
+
+// ...is equivalent to the following:
+
+<?= "<p>Hello, world!</p>"; ?>
+
+// OR
+
+<?php echo "<p>Hello, world!</p>"; ?>
+
+
+// QHPL allows the following.
+
+php:
+  for(/* some loop */):
+    echo <content>; // pseudo/QHPL variable
+
+<content>: // defining the pseudo/QHPL variable
+  p: Hello, world!
+
+// and is equivalent to:
+
+<?php
+  for(/* some loop */) {
+    echo "<p>Hello, world!</p>";
+  }
+?>
